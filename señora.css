@@ -1,0 +1,274 @@
+:root {
+  --primario: #9c27b0;
+  --primarioOscuro: #89119d;
+  --secundario: #ffce00;
+  --secundarioOscuro: rgb(233, 287, 2);
+  --blanco: #fff;
+  --negro: #000;
+  --gris: grey;
+  --green: rgb(97, 174, 20);
+
+
+  --fuentePrincipal: "Staatliches", cursive;
+}
+/*snipet*/
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+/**Globales**/
+body {
+  background-color: var(--blanco);
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+p {
+  font-size: 1.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--negro);
+}
+
+a {
+  text-decoration: none;
+}
+a:active,
+a:focus {
+  outline: none;
+}
+
+img {
+  width: 100%;
+  border-radius: 4%;
+}
+.contenedor {
+  max-width: 120rem;
+  margin: 0 auto;
+  display: flex;
+}
+h1,
+h2,
+h3 {
+  text-align: center;
+  color: var(--negro);
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3.2rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+/**footer**/
+
+.footer {
+  background-color: var(--gris);
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+.footer__texto {
+  text-align: center;
+  font-family: var(--blanco);
+  font-size: 2.2rem;
+}
+
+/**navegacion**/
+.navegacion {
+  list-style-type: none;
+  background-color: var(--gris);
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.navegacion li{
+  
+  list-style-type: none;
+}
+.navegacion__enlance {
+  /* font-family: var(--fuentePrincipal); */
+  color: var(--blanco);
+  font-size: 2rem;
+}
+.navegacion__enlance--activo,
+.navegacion__enlance:hover {
+  font-size: 35px;
+  color: var(--secundario);
+}
+
+/**buscador**/
+.buscador{
+  justify-content: end;
+  display: flex;
+  
+  
+}
+#buscador {
+  width: 55rem;
+  padding: 1rem;
+
+     
+}
+button {
+  padding: 1rem;
+  cursor: pointer;         
+}
+
+/**header**/
+
+.header__logo{
+  display: flex;
+  color: inherit;
+    text-decoration: none;
+    flex-direction: row-reverse;
+
+}
+
+/**aside**/
+.aside{
+  display: flex;
+  width: 50rem;
+  flex-direction: column;
+  align-items: center;
+}
+.aside .lista_desordenada{
+  list-style-type: none;
+}
+.aside .lista_ordenada{
+  color: var(--negro);
+  font-size: large;
+}
+
+/**sectionlogo**/
+.logo {
+  align-items: end;
+  background-image: url(./assets/sp_top_bnr_l.jpg);
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+  height: 35rem;
+}
+.logo__nombre{
+  
+  font-weight: normal;
+}
+.logo__bold{
+  font-weight: bold;
+  font-size: 5rem;
+}
+
+/**SECTION**/
+
+.lista {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+@media (min-width: 768px) {
+  .lista {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/**PRODUCTOS**/
+/* .article {
+  border-radius: 4%;
+  border: grey 2px solid;
+  padding: 1rem;
+} */
+.article__nombre {
+  font-size: 2rem;
+  color: var(--negro);
+}
+.article__precio {
+  font-size: 1.8rem;
+  color: var(--negro);
+}
+.article__nombre,
+.article__precio {
+  /* font-family: var(--fuentePrincipal); */
+  margin: 1rem 0;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/**Sobre Nosotros**/
+
+@media (min-width: 768px) {
+
+  .sobre-nosotros{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 2rem;
+  }
+
+
+}
+
+/**table**/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid var(--negro);
+  padding: 8px; 
+  text-align: left; 
+}
+
+th {
+  background-color: var(--secundario); 
+  color: var(--green);
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2; 
+}
+
+/** Contacto **/
+.contacto-bg {
+  background-image: url(./assets/bolso_negro.jpg);
+  max-width: max-content;
+  height: 40rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.fieldset{
+  border: var(--blanco);
+  background-color: var(--blanco);
+  margin: -1rem auto 0 auto;
+  width:70rem;
+  padding: 5rem
+}
+
+.campo {
+  display: flex;
+  margin-bottom: 2rem;
+}
+.campo__label {
+  flex: 0 0 9rem;/*factor crecimiento por cada pixel recibe 0*/
+  text-align: right;
+  padding-right: 2rem;
+}
+.campo__field {
+  flex: 1;
+  border: 1px solid var(--gris);
+}
+.campo__field--textarea {
+  height: 20rem;
+}

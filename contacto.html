@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Señora</title>
+    <link rel="stylesheet" href="./señora.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1><a class="header__logo" href="index.html">BUYMAN</a></h1>
+        <section class="logo">
+            <h2 class="logo__nombre">
+                BUYMAN<span class="logo__bold">VINTAGE</span>
+            </h2>
+        </section>
+    </header>
+
+    <nav>
+        <ul class="navegacion">
+            <li><a class="navegacion__enlance navegacion__enlance--activo" href="./señora.html">Señoras</a></li>
+            <li><a class="navegacion__enlance" href="./hombres.html">Hombres</a></li>
+            <li><a class="navegacion__enlance" href="./bebes.html">Bebés</a></li>
+            <li><a class="navegacion__enlance" href="./estiloVida.html">Vida</a></li>
+            <li><a class="navegacion__enlance" href="./nosotros.html">Nosotros</a></li>
+            <li><a class="navegacion__enlance" href="./contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main class="contenedor">
+        <h3 class="centrar-texto">Contacto</h3>
+        <div class="contacto-bg"></div>
+        <fieldset class="fieldset">
+            <form class="formulario" action="./index.html" method="get">
+                <div class="campo">
+                    <label class="campo__label" for="nombre">Nombre</label>
+                    <input name="input"
+                        class="campo__field"
+                        type="text"
+                        placeholder="Tu Nombre"
+                        id="nombre"
+                        required
+                        minlength="10">
+                </div>
+                <div class="campo">
+                    <label class="campo__label" for="Apellido">Apellido</label>
+                    <input name="input"
+                        class="campo__field"
+                        type="text"
+                        placeholder="Tu Apellido"
+                        id="Apellido"
+                        required
+                        maxlength="20">
+                </div>
+                <div class="campo">
+                    <label class="campo__label" for="email">E-mail</label>
+                    <input name="input"
+                        class="campo__field"
+                        type="email"
+                        placeholder="Tu E-mail"
+                        id="email"
+                        required>
+                </div>
+                <div class="campo">
+                    <label class="campo__label" for="fecha">Fecha del Incidente</label>
+                    <input name="input"
+                        class="campo__field"
+                        type="date"
+                        id="fecha"
+                        required>
+                </div>
+
+                <div class="campo">
+                    <label class="campo__label" for="mensaje">Mensaje</label>
+                    <textarea
+                        class="campo__field campo__field--textarea"
+                        id="mensaje"
+                        required
+                        placeholder="No puede tener más de 500 caracteres."
+                        maxlength="500"></textarea>
+                </div>
+
+                <div class="campo">
+                    <label for="opcion1">
+                        <input name="opcion" type="radio" id="opcion1" value="Opción 1"> 
+                        Enviado desde un Móvil
+                    </label>
+                </div>
+                <div class="campo">
+                    <label for="opcion2">
+                        <input name="opcion" type="radio" id="opcion2" value="Opción 2"> 
+                        Enviado desde un PC
+                    </label>
+                </div>
+
+                <div class="campo">
+                    <label for="option1">
+                        <input name="options" type="checkbox" id="option1" value="Opción 1" required>
+                        Has leído las Normas
+                    </label>
+                </div>
+                <div class="campo">
+                    <label for="option2">
+                        <input name="options" type="checkbox" id="option2" value="Opción 2" required>
+                        Eres Humano
+                    </label>
+                </div>
+
+                <div class="campo">
+                    <input name="input" type="submit" value="Enviar" class="boton boton--primario">
+                </div>
+            </form>
+        </fieldset>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__texto">
+            Todos los derechos reservados 2024. Bryan Zavala. Para más información sobre nuestra Tienda, visita <a href="./señora.html">nuestra página de Tienda</a> o <a href="./contacto.html">ponte en contacto</a>.
+        </p>
+    </footer>
+
+</body>
+</html>
