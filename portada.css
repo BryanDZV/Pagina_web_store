@@ -8,7 +8,7 @@
   --fuenteParrafos: "Open Sans", sans-serif;
 
   --primario: #784d3c;
-  --gris: #e1e1e1;
+  --gris: grey;
   --blanco: #ffffff;
   --negro: #000000;
 }
@@ -96,7 +96,7 @@ header {
   margin-top: 2rem;
 }
 .footer__texto {
+  font-family: var(--fuenteParrafos);
   text-align: center;
-  font-family: var(--blanco);
-  font-size: 2.2rem;
+  font-size: 1.2rem;
 }
