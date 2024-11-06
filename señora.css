@@ -13,6 +13,8 @@
   --fuentePrincipal: "Staatliches", cursive;
 }
 /*snipet*/
+
+
 html {
   box-sizing: border-box;
   font-size: 62.5%; /*1 rem=10px*/
@@ -21,6 +23,15 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+.visitalo_bryan{
+  outline: none;
+  text-decoration: none;
+  font-size: 15px;
+  background-color: #45a049;
+  border: 1rem solid green;
+
 }
 
 /**Globales**/
@@ -123,14 +134,46 @@ button {
   cursor: pointer;
 }
 
-/**header**/
+/**header Comun  a Todos**/
 
 .header__logo {
   display: flex;
   color: inherit;
   text-decoration: none;
   flex-direction: row-reverse;
+  justify-content: center;
 }
+
+/**HEADER INDEX**/
+body.index .header_portada{
+  background-image: url(./assets/shop.png);
+  justify-content: center;
+  height: 60rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+}
+.header__texto--index {
+  
+  color: var(--negro);
+  margin-top: 5rem;
+}
+.visitalo__bryan  {
+  border: 3px solid var(--green);
+  background-color: var(--green);
+  color: var(--blanco);
+  text-decoration: none;
+  font-size: 35px;
+  outline: none;
+}
+.visitalo__bryan a:hover {
+  background-color: red; /* Fondo transparente cuando el ratón pasa sobre el contenedor */
+  outline: none;
+  text-decoration: none;
+}
+
 /**headerPortada**/
 .header_portada{
   background-image: url(./assets/hero-laptop-16to7-3674f9a79f.jpg);
