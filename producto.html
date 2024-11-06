@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Señora</title>
+    <link rel="stylesheet" href="./señora.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <h1><a class="header__logo" href="portada.html">BUYMAN</a></h1>
+      <section class="logo">
+        <h2 class="logo__nombre">
+          BUYMAN<span class="logo__bold">VINTAGE</span>
+        </h2>
+      </section>
+    </header>
+
+    <nav>
+      <ul class="navegacion">
+        <li>
+          <a
+            class="navegacion__enlance navegacion__enlance--activo"
+            href="./señora.html"
+            >Señoras</a
+          >
+        </li>
+
+        <li><a class="navegacion__enlance" href="./bebes.html">Bebés</a></li>
+        <li>
+          <a class="navegacion__enlance" href="./hombres.html">Hombres</a>
+        </li>
+        <li>
+          <a class="navegacion__enlance" href="./estiloVida.html">Vida</a>
+        </li>
+        <li>
+          <a class="navegacion__enlance" href="./nosotros.html">Nosotros</a>
+        </li>
+        <li>
+          <a class="navegacion__enlance" href="./contacto.html">Contacto</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="contenedor">
+      <article class="lista">
+        <div class="producto">
+          <h2>Abrigo</h2>
+          <img class="producto__imagen" src="./assets/428.jpg" alt="img428" />
+          <div class="producto__contenido">
+            <p>
+              ornare faucibus massa, eu condimentum nunc imperdiet vitae. Mauris
+              vehicula finibus ante in finibus. Suspendisse potenti.
+              Pellentesque condimentum eros est, nec pretium urna ultrices a.
+            </p>
+          </div>
+        </div>
+        <form class="formulario">
+          <h2>Seleccionar</h2>
+          <!-- menú de opciones -->
+          <select class="formulario__campo">
+            <option disabled selected value="">--Seleccionar Talla--</option>
+            <option value="pequena">Pequeña</option>
+            <option value="mediana">Mediana</option>
+            <option value="grande">Grande</option>
+          </select>
+
+          <input
+            class="formulario__campo"
+            type="number"
+            placeholder="Cantidad"
+            min="1"
+          />
+
+          <input
+            class="formulario__submit"
+            type="submit"
+            value="Agregar al Carrito"
+          />
+        </form>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__texto">
+        Front End Store - Todos los derechos Reservados 2024.
+      </p>
+    </footer>
+  </body>
+</html>
