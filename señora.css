@@ -290,12 +290,15 @@ tbody tr:nth-child(even) {
 }
 
 /** Contacto **/
+
 .contacto-bg {
-  background-image: url(./assets/bolso_negro.jpg);
+  /* background-image: url(./assets/bolso_negro.jpg); */
   max-width: max-content;
   height: 40rem;
   background-size: cover;
   background-repeat: no-repeat;
+  float: left; 
+  width: 100%;
 }
 
 .fieldset {
@@ -304,21 +307,90 @@ tbody tr:nth-child(even) {
   margin: -1rem auto 0 auto;
   width: 70rem;
   padding: 5rem;
+  clear: both; /* romper el flotado de la imagen  */
 }
 
 .campo {
   display: flex;
   margin-bottom: 2rem;
+  position: relative; 
 }
+
+/* Flotamos las etiquetas a la izquierda */
 .campo__label {
-  flex: 0 0 9rem; /*factor crecimiento por cada pixel recibe 0*/
+  flex: 0 0 9rem;
   text-align: right;
   padding-right: 2rem;
+  float: left; /* Flotamos las etiquetas */
+  position: relative;
 }
+
 .campo__field {
   flex: 1;
   border: 1px solid var(--gris);
+  padding: 0.5rem;
 }
+
 .campo__field--textarea {
   height: 20rem;
+}
+
+
+.campo__field:hover {
+  border-color: #ff6347; 
+}
+/* Pseudoelemento ::before para agregar iconos o texto antes de los campos */
+.campo__label::after {
+  content: '🔲 '; 
+  margin-right: 5px;
+  font-size: 1.2rem;
+}
+
+/* Pseudoclase nth-child para los campos del formulario */
+.campo:nth-child(odd) {
+  background-color: #f9f9f9; /* Fondo diferente para los campos impares */
+}
+
+.campo:nth-child(even) {
+  background-color: #f1f1f1; /* Fondo diferente para los campos pares */
+}
+
+/* Estilo adicional para los campos en el formulario */
+.campo__label:hover {
+  color: #ff4500; 
+}
+
+.campo__field:focus {
+  outline: 2px solid #ff6347; /* Estilo para cuando el campo recibe foco */
+  border-color: #ff6347;
+}
+
+/* Estilo para el botón de envío */
+.boton {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+  background-color: #45a049; 
+}
+
+.boton--primario {
+  background-color: #007bff;
+}
+
+.boton--primario:hover {
+  background-color: #0056b3;
+}
+
+/* Para romper flotantes en otros elementos USA ESTA CLASE EN EL CONTENDOR Q QUIERAS */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
 }
