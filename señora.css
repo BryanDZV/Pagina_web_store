@@ -283,21 +283,60 @@ body.index .header_portada{
   border: grey 2px solid;
   padding: 1rem;
 } */
-.article__nombre {
-  font-size: 2rem;
-  color: var(--negro);
-}
-.article__precio {
-  font-size: 1.8rem;
-  color: var(--negro);
-}
-.article__nombre,
-.article__precio {
+
+.producto__nombre,
+.producto__precio {
   /* font-family: var(--fuentePrincipal); */
   margin: 1rem 0;
   text-align: center;
   line-height: 1.2;
+  font-size: 1.8rem;
+  color: var(--negro);
+  font-weight: bold;
+ 
 }
+.producto__nombre_ELIGEME{
+color: var(--primarioOscuro);
+border: 1px solid var(--primario);
+}
+
+/* Estilo para el formulario de selección */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.formulario__campo {
+  padding: 1rem;
+  font-size: 1.6rem;
+  border: 1px solid var(--gris);
+  border-radius: 4px;
+}
+
+.formulario__campo:focus {
+  outline: none;
+  border-color: var(--secundario);
+}
+
+.formulario__submit {
+  background-color: var(--secundario);
+  color: var(--blanco);
+  padding: 1.5rem;
+  font-size: 1.8rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.formulario__submit:hover {
+  background-color: var(--secundarioOscuro);
+}
+
+
+
 
 /**Sobre Nosotros**/
 
